@@ -2,7 +2,6 @@ module Ex2 where
 
 import Prelude as P
 import System.Environment as SE
-import Control.Monad (liftM)
 import Text.Read (readMaybe)
 
 readLines :: [String] -> [Int]

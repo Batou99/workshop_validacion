@@ -2,7 +2,6 @@ module Ex1 where
 
 import Prelude as P
 import System.Environment as SE
-import Control.Monad (liftM)
 
 readLines :: [String] -> [Int]
 readLines = map P.read
