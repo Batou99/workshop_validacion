@@ -1,11 +1,16 @@
-module Ex1 where
+module Ex2 where
 
 import Prelude as P
 import System.Environment as SE
 import Control.Monad (liftM)
+import Text.Read (readMaybe)
 
 readLines :: [String] -> [Int]
-readLines = map P.read
+readLines = map $ getNumber . readMaybe
+
+getNumber :: Maybe Int -> Int
+getNumber (Just number) = number
+getNumber Nothing = 0
 
 main = do
   -- getArgs :: IO [String]
